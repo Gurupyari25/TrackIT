@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackIT Attendance System</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/navCSS.css" />
+  </head>
+  <body>
+    <div id="bgImg"></div>
+
+    <div class="nav">
+      <a href="/"> <img src="images/logo.png" alt="logo" /> </a>
+      <a href=""> <h2>Home</h2> </a>
+    </div>
+
+    <div id="msg"> {{msg}} </div>
+
+    <div class="container">
+
+      <a href="/login">
+        <div id="admin">
+          <img src="images/admin.gif" alt="" />
+        </div>
+      </a>
+
+      <a href="/student">
+        <div id="student">
+          <img src="images/student.gif" alt="" />
+        </div>
+      </a>
+
+      <input type="checkbox" {{check}} />
+      <div id="login">
+        <h1><u>Admin Login</u></h1>
+        <div id="err">{{error}} </div>
+        <form action="/login" method="POST">
+          <p class="headers">Username</p>
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="Your username"
+              required
+            />
+            <img src="images/admin.png" alt="" />
+          </div>
+          <p class="headers">Password</p>
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="Your password"
+              required
+            />
+            <img src="images/key.png" alt="" />
+          </div>
+          <div id="circle">
+            <div></div>
+            <input id="loginBtn" type="submit" value="Login" />
+          </div>
+          <p id="register">
+            Not a member?
+            <a href="/register">Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>

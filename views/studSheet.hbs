@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackIT Attendance System</title>
+    <link rel="stylesheet" href="css/studSheet.css" />
+    <link rel="stylesheet" href="css/navCSS.css" />
+  </head>
+  <body>
+
+    <div class="nav">
+      <a href="/"> <img src="images/logo.png" alt="logo" /> </a>
+      <a href=""> <h2>Student Panel</h2> </a>
+    </div>
+    <div id="stud"> {{name}} </div>
+
+    <div id="blankML"></div>
+    <div class="container ML">
+      <h2>ML</h2>
+      <table id="MLT">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each mlList}}
+            <tr class="Row">
+              <td>{{Date}}</td>
+              <td>{{status}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div id="blankCN"></div>
+    <div class="container CN">
+      <h2>CN</h2>
+      <table id="CNT">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each cnList}}
+            <tr class="Row">
+              <td>{{Date}}</td>
+              <td>{{status}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div id="blankIOT"></div>
+    <div class="container IOT">
+      <h2>IOT</h2>
+      <table id="IOTT">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each iotList}}
+            <tr class="Row">
+              <td>{{Date}}</td>
+              <td>{{status}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <script src="js/studSheet.js"></script>
+  </body>
+</html>

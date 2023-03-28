@@ -1,0 +1,279 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Open+Sans:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bgImg {
+  background: url("../images/homeBg.jpg") no-repeat center/cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+#msg {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(153 227 8);
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 29%;
+  left: 24%;
+  height: 251px;
+  width: 51.3vw;
+}
+
+#login {
+  display: none;
+}
+input[type="checkbox"]:checked + #login {
+  display: block;
+}
+
+input[type="checkbox"] {
+  z-index: -1;
+  height: 240px;
+  width: 240px;
+  opacity: 0;
+}
+
+#admin {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+}
+
+#admin img {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+}
+
+#admin:hover {
+  cursor: pointer;
+}
+
+#admin:hover img {
+  animation: admin_hover 0.2s ease forwards;
+}
+/* input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover #admin > img {
+  animation: admin_hover 0.2s ease forwards;
+} */
+
+@keyframes admin_hover {
+  0% {
+    height: 240px;
+    width: 240px;
+  }
+  100% {
+    height: 220px;
+    width: 220px;
+    margin-left: 8px;
+    margin-top: 12px;
+  }
+}
+#student {
+  position: absolute;
+  top: 3px;
+  left: 470px;
+  height: 230px;
+  width: 230px;
+}
+
+#student img {
+  height: 230px;
+  width: 230px;
+}
+
+#student:hover {
+  cursor: pointer;
+}
+
+#student:hover img {
+  animation: student_hover 0.2s ease forwards;
+}
+
+@keyframes student_hover {
+  0% {
+    height: 230px;
+    width: 230px;
+  }
+  100% {
+    height: 214px;
+    width: 214px;
+    margin-left: 8px;
+    margin-top: 12px;
+  }
+}
+
+#login {
+  background-color: rgb(255 242 180);
+  border: 7px solid rgb(15, 18, 61);
+  border-radius: 32px;
+  position: absolute;
+  top: -60px;
+  left: 431px;
+  height: 450px;
+  width: 300px;
+  padding: 27px 20px;
+}
+
+#login h1 {
+  font-family: Batangas;
+  color: rgb(15, 18, 61);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+#err {
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  color: rgb(209 5 5);
+}
+
+.headers {
+  font-family: Batangas;
+  font-size: 21px;
+  color: rgb(15, 18, 61);
+  padding-top: 36px;
+  padding-left: 6px;
+}
+
+form div {
+  position: relative;
+  height: 35px;
+  width: 100%;
+}
+
+form div img {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: -20px;
+  left: 188px;
+}
+
+#login input {
+  position: absolute;
+  width: 95%;
+  height: 30px;
+  left: 6px;
+  padding: 0px 6px;
+  font-family: "Crimson Pro", serif;
+}
+
+#login input[type="text"],
+input[type="password"] {
+  background-color: rgb(235, 221, 179);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(168, 143, 96);
+  transform: scale(1.1, 1);
+  padding: 0px 10px;
+}
+
+#login input[type="text"]:focus,
+input[type="password"]:focus {
+  color: rgb(168, 143, 96);
+}
+
+#circle {
+  display: flex;
+  position: relative;
+  top: 45px;
+  left: 10px;
+  height: 52px;
+  width: 90%;
+}
+
+#login input[type="submit"] {
+  height: 44px;
+  width: 100%;
+  left: 0px;
+  margin: 0px 0px;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: rgb(15, 18, 61);
+  color: #ff5555;
+  font-family: Batangas;
+  font-size: 25px;
+  box-shadow: 5px 5px rgb(173, 173, 173);
+}
+
+#circle div {
+  height: 32px;
+  width: 32px;
+  border: 2px solid black;
+  background-color: #ff5555;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+}
+
+#circle,
+#login input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#login input[type="submit"]:active {
+  box-shadow: none;
+}
+
+#circle:active {
+  top: 48px;
+  left: 13px;
+}
+
+#login input[type="submit"]:active::after {
+  box-shadow: 5px 5px rgb(173, 173, 173);
+}
+#circle:active::after #circle {
+  box-shadow: 5px 5px rgb(173, 173, 173);
+  top: 45px;
+  left: 10px;
+}
+
+#register {
+  font-family: "Open Sans", sans-serif;
+  color: #021038e0;
+  font-size: 14px;
+  font-weight: 600;
+  transform: scale(1.1, 1);
+  height: 20px;
+  margin-top: 52px;
+  margin-left: 45px;
+}
+
+#register a {
+  color: #f45730ec;
+  text-decoration: none;
+}
+
+/* #login {
+  display: none;
+} */

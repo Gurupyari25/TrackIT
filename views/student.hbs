@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackIT Attendance System</title>
+    <link rel="stylesheet" href="css/student.css" />
+    <link rel="stylesheet" href="css/navCSS.css" />
+  </head>
+  <body>
+    <div id="bgImg"></div>
+
+    <div class="nav">
+      <a href="/"> <img src="images/logo.png" alt="logo" /> </a>
+      <a href=""> <h2>Student Panel</h2> </a>
+    </div>
+
+    <div id="stud"> {{name}} </div>
+    <div id="msg"> {{msg}} </div>
+
+    <div class="container">
+      <a href="/details"><div id="details"><img
+            src="images/details.gif"
+            alt=""
+          /></div></a> 
+      
+      <div id="train" class="{{hide}}">
+        <form action="/student" method="POST">
+          <p class="headers">Click the button to train your dataset</p>
+           
+            <div id="circle">
+              <div></div>
+              <input id="trainBtn" type="submit" value="Train" />
+            </div>
+        </form>
+      </div>
+
+      <a href="/proceed"><div id="attendance"><img
+            src="images/track.gif"
+            alt=""
+          /></div></a>
+        
+      <input type="checkbox" {{check}} />
+      <div id="proceed">
+        <div id="err"> {{error}} </div>
+        <form action="/proceed" method="POST">
+          <p class="headers">Roll Number</p>
+            <input
+              type="number"
+              minlength="6" maxlength="6"
+              name="id"
+              placeholder="Your roll number"
+              title="Roll number should be of 6 digits"
+              required
+            />
+            <div id="circle">
+              <div></div>
+              <input id="proceedBtn" type="submit" value="Proceed" />
+            </div>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    <script src="js/student.js"></script>
+  </body>
+</html>

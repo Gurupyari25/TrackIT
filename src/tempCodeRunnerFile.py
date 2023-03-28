@@ -1,0 +1,1 @@
+roi = cv2.resize(roi, (200,200))

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Batangas;
+  src: url(fonts/Batangas_Bold_700.otf);
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 78px;
+  width: 100vw;
+  align-items: center;
+  background-color: rgb(4 13 40);
+  box-shadow: 0 0 6px rgb(0 7 26), 0 0 8px rgb(2 16 62);
+}
+
+.nav a {
+  text-decoration: none;
+}
+.nav img {
+  margin-left: 5px;
+  width: 115px;
+  height: 100px;
+}
+
+.nav h2 {
+  padding-left: 5px;
+  font-family: Batangas;
+  color: #ff5555;
+}
+
+.nav h2:hover {
+  color: #f77260;
+}

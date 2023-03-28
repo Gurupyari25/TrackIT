@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/details.css" />
+    <title>TrackIT Attendance System</title>
+  </head>
+  <body>
+    <div id="bgImg"></div>
+
+    <div class="container">
+      <div id="vector">
+        <p><u>Student details</u></p>
+        <img src="images/vector1.png" alt="vector" />
+      </div>
+      <div id="details">
+        <form action="/details" method="POST">
+          <p class="headers">Name</p>
+          <div>
+            <input
+              type="text"
+              placeholder="   Your name"
+              name="name"
+              minlength="3"
+              maxlength="12"
+              title="name should be 4 to 12 characters long"
+              required
+            />
+            <img src="images/user.png" alt="" />
+          </div>
+          <p class="headers">Roll number</p>
+          <div>
+            <input
+              type="number"
+              placeholder="   Your roll number"
+              name="id"
+              minlength="6"
+              maxlength="6"
+              title="id should be of 6 digits"
+              required
+            />
+            <img src="images/id.png" alt="" />
+          </div>
+          <p class="headers">Course</p>
+          <div>
+            <input
+              type="text"
+              placeholder="   Your course"
+              name="course"
+              required
+            />
+            <img src="images/course.png" alt="" />
+          </div>
+          <p class="headers">Semester</p>
+          <div>
+            <select name="semester" required>
+              <option disabled selected>Select your semester</option>
+              <option value="I">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IV">IV</option>
+            </select>
+            <img src="images/subject.png" alt="" />
+          </div>
+
+          <div id="btn">
+            <div></div>
+            <input id="submit" type="submit" value="Save details" />
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

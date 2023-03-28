@@ -1,0 +1,271 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Open+Sans:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bgImg {
+  background: url("../images/studentBg.jpg") no-repeat center/cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+#stud {
+  position: absolute;
+  top: 7.5%;
+  left: 9%;
+  width: 136px;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  color: #ff974d;
+}
+
+#msg {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(153 227 8);
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 32%;
+  left: 20%;
+  height: 239px;
+  width: 63.5vw;
+}
+
+#details {
+  position: absolute;
+  height: 173px;
+  width: 173px;
+}
+
+#details img {
+  height: 240px;
+  width: 240px;
+}
+
+#details:hover {
+  cursor: pointer;
+}
+
+#details:hover img {
+  animation: details_hover 0.2s ease forwards;
+}
+
+@keyframes details_hover {
+  0% {
+    height: 240px;
+    width: 240px;
+  }
+  100% {
+    height: 220px;
+    width: 220px;
+    margin-left: 8px;
+    margin-top: 12px;
+  }
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 3px;
+  right: 105px;
+  z-index: -1;
+  height: 245px;
+  width: 240px;
+  opacity: 0;
+}
+
+#attendance {
+  position: absolute;
+  top: 3px;
+  right: 105px;
+  height: 173px;
+  width: 173px;
+}
+
+#attendance img {
+  height: 230px;
+  width: 230px;
+}
+
+#attendance:hover {
+  cursor: pointer;
+}
+
+#attendance:hover img {
+  animation: attendance_hover 0.2s ease forwards;
+}
+
+@keyframes attendance_hover {
+  0% {
+    height: 230px;
+    width: 230px;
+  }
+  100% {
+    height: 214px;
+    width: 214px;
+    margin-left: 8px;
+    margin-top: 12px;
+  }
+}
+
+#train {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255 242 180);
+  border: 7px solid rgb(15, 18, 61);
+  border-radius: 32px;
+  position: absolute;
+  top: 18px;
+  left: 241px;
+  height: 210px;
+  width: 338px;
+  padding: 12px 20px;
+}
+
+#train input[type="submit"] {
+  height: 35px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0px 0px;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: rgb(15, 18, 61);
+  color: #ff5555;
+  font-family: Batangas;
+  font-size: 22px;
+  box-shadow: 5px 5px rgb(173 173 173);
+}
+
+#proceed {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255 242 180);
+  border: 7px solid rgb(15, 18, 61);
+  border-radius: 32px;
+  position: absolute;
+  top: 18px;
+  left: 241px;
+  height: 210px;
+  width: 338px;
+  padding: 12px 20px;
+}
+.headers {
+  position: absolute;
+  top: 0;
+  font-family: Batangas;
+  font-size: 21px;
+  color: rgb(15, 18, 61);
+  padding-top: 36px;
+  padding-left: 6px;
+  margin-bottom: 12px;
+}
+#err {
+  position: absolute;
+  top: 55%;
+  left: 23%;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  color: rgb(209 5 5);
+}
+#proceed input {
+  position: absolute;
+  width: 84%;
+  height: 30px;
+  left: 26px;
+  top: 34%;
+  padding: 0px 6px;
+  font-family: "Crimson Pro", serif;
+  background-color: rgb(235, 221, 179);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  color: rgb(182, 171, 137);
+  transform: scale(1.1, 1);
+  padding: 0px 10px;
+}
+#circle {
+  display: flex;
+  position: relative;
+  top: 125px;
+  left: 29px;
+  height: 41px;
+  width: 77%;
+}
+#proceed input[type="submit"] {
+  height: 35px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0px 0px;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: rgb(15, 18, 61);
+  color: #ff5555;
+  font-family: Batangas;
+  font-size: 22px;
+  box-shadow: 5px 5px rgb(173 173 173);
+}
+#circle div {
+  height: 28px;
+  width: 28px;
+  border: 2px solid black;
+  background-color: #ff5555;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  z-index: 1;
+}
+
+#circle,
+#proceed input[type="submit"]:hover,
+#train input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#proceed input[type="submit"]:active,
+#train input[type="submit"]:active {
+  box-shadow: none;
+}
+
+#circle:active {
+  top: 130px;
+  left: 34px;
+}
+
+#proceed input[type="submit"]:active::after,
+#train input[type="submit"]:active::after {
+  box-shadow: 5px 5px rgb(173, 173, 173);
+}
+#circle:active::after #circle {
+  box-shadow: 5px 5px rgb(173, 173, 173);
+  top: 125px;
+  left: 29px;
+}
+#proceed {
+  display: none;
+}
+input[type="checkbox"]:checked + #proceed {
+  display: block;
+}

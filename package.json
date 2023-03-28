@@ -1,0 +1,20 @@
+{
+  "name": "trackit",
+  "version": "1.0.0",
+  "description": "This is a face recognition based attendance system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Gurupyari",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "moment": "^2.29.4",
+    "mongoose": "^6.4.4",
+    "validator": "^13.7.0"
+  }
+}

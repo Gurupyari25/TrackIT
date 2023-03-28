@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/adminReg.css" />
+    <title>TrackIT Attendance System</title>
+  </head>
+  <body>
+    <div id="bgImg"></div>
+
+    <div class="container">
+
+      <div id="vector">
+        <p><u>Admin Registration</u></p>
+        <img src="images/vector1.png" alt="vector" />
+      </div>
+      <div id="register">
+        <form action="/register" method="POST">
+          <p class="headers">Username</p>
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="   Your username"
+              minlength="3"
+              maxlength="12"
+              title="username should be 4 to 12 characters long"
+              required
+            />
+            <img src="images/user.png" alt="" />
+          </div>
+          <p class="headers">Email</p>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="   Your email"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              title="Please enter valid email format"
+              required
+            />
+            <img src="images/mail.png" alt="" />
+          </div>
+          <p class="headers">Subject</p>
+          <div>
+            <select name="subject" required>
+              <option disabled selected>Select a subject</option>
+              <option value="ml">ML</option>
+              <option value="iot">IOT</option>
+              <option value="cn">CN</option>
+            </select>
+            <img src="images/subject.png" alt="" />
+          </div>
+          <p class="headers">Password</p>
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="   Your password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{5,15}$"
+              title="Password must be 5 to 15 characters long and contain atleast one: lowercase letter, uppercase letter, digit, symbol(!@#$%^&*)"
+              reuired
+            />
+            <img src="images/userkey.png" alt="" />
+          </div>
+          <div id="circle">
+            <div></div>
+            <input id="regBtn" type="submit" value="Register" />
+          </div>
+          <p id="login">
+            Already registered?
+            <a href="/login">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
